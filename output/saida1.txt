@@ -1,0 +1,12 @@
+00 IDE c
+00 IDE name
+00 REL =
+01 CAD "Thatianne"
+01 PRE var
+01 IDE age
+01 REL =
+02 NRO 24
+02 PRE var
+02 IDE newAge
+02 REL =
+02 NRO 24

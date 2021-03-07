@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  lexical:
+    image: python:3.7
+    volumes:
+      - .:/usr/src/lexical-analysis
+    working_dir: /usr/src/lexical-analysis
+    stdin_open: true
+    tty: true
+    # user: nobody
