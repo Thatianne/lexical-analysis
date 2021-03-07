@@ -50,4 +50,11 @@ from .reservedWords.middle.StringN import StringN
 from .reservedWords.middle.GeneralIfIntI import GeneralIfIntI
 from .reservedWords.middle.IntN import IntN
 
+from .reservedWords.middle.GeneralRealReadA import GeneralRealReadA
+from .reservedWords.middle.GeneralReturnRealReadE import GeneralReturnRealReadE
+from .reservedWords.middle.GeneralReturnRealReadR import GeneralReturnRealReadR
+from .reservedWords.middle.ReturnR import ReturnR
+from .reservedWords.middle.ReturnT import ReturnT
+from .reservedWords.middle.ReturnU import ReturnU
+
 from .identifiers.final.Identifiers import Identifiers

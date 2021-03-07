@@ -4,3 +4,4 @@ var newAge = 24 + 1
 start struct string
 typedef then true
 if int
+return real read

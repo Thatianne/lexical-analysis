@@ -18,4 +18,7 @@
 04 PRE then
 05 PRE true
 05 PRE if
-05 PRE int
+06 PRE int
+06 PRE return
+06 PRE real
+06 PRE read

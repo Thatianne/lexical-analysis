@@ -10,7 +10,7 @@ class Initial(State):
     # s -> struct, start, string feito
     # t -> typedef, then, true feito
     # i -> if, int feito
-    # r -> return, real, read,
+    # r -> return, real, read feito
     # e -> extends, else
     # p -> procedure, print
     # f -> function, false
@@ -27,6 +27,8 @@ class Initial(State):
       return 'GeneralStructStartStringS'
     elif value == 'i':
       return 'GeneralIfIntI'
+    elif value == 'r':
+      return 'GeneralReturnRealReadR'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:
