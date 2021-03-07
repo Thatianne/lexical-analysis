@@ -1,12 +1,14 @@
 from states.identifiers.final.Identifiers import Identifiers
 import helpers.constants as constants
 
-class TrueU(Identifiers):
+class GeneralIfIntI(Identifiers):
 
   @staticmethod
   def process(value):
-    if (value == 'e'):
+    if (value == 'f'):
       return 'ReservedWords'
+    elif value == 'n':
+      return 'IntN'
     elif value in constants.TO_IDENTIFIERS:
       return 'Identifiers'
     else:

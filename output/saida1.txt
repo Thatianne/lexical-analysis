@@ -13,4 +13,9 @@
 03 NRO + 1
 03 PRE start
 03 PRE struct
-03 PRE string
+04 PRE string
+04 PRE typedef
+04 PRE then
+05 PRE true
+05 PRE if
+05 PRE int

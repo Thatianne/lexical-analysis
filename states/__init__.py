@@ -22,7 +22,8 @@ from .reservedWords.middle.ConstC import ConstC
 from .reservedWords.middle.ConstN import ConstN
 from .reservedWords.middle.ConstO import ConstO
 from .reservedWords.middle.ConstS import ConstS
-from .reservedWords.middle.GeneralT import GeneralT
+
+from .reservedWords.middle.GeneralTypedefThenTrueT import GeneralTypedefThenTrueT
 from .reservedWords.middle.ThenE import ThenE
 from .reservedWords.middle.ThenH import ThenH
 from .reservedWords.middle.TrueR import TrueR
@@ -32,18 +33,21 @@ from .reservedWords.middle.TypedefEFirst import TypedefEFirst
 from .reservedWords.middle.TypedefESecond import TypedefESecond
 from .reservedWords.middle.TypedefP import TypedefP
 from .reservedWords.middle.TypedefY import TypedefY
+
 from .reservedWords.middle.VarA import VarA
 from .reservedWords.middle.VarV import VarV
 
 from .reservedWords.middle.GeneralStructStartStringS import GeneralStructStartStringS
 from .reservedWords.middle.GeneralStructStartStringT import GeneralStructStartStringT
 from .reservedWords.middle.GeneralStructStringR import GeneralStructStringR
-
 from .reservedWords.middle.StructC import StructC
 from .reservedWords.middle.StructU import StructU
 from .reservedWords.middle.StartA import StartA
 from .reservedWords.middle.StartR import StartR
 from .reservedWords.middle.StringI import StringI
 from .reservedWords.middle.StringN import StringN
+
+from .reservedWords.middle.GeneralIfIntI import GeneralIfIntI
+from .reservedWords.middle.IntN import IntN
 
 from .identifiers.final.Identifiers import Identifiers

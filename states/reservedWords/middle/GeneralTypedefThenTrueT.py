@@ -1,12 +1,16 @@
 from states.identifiers.final.Identifiers import Identifiers
 import helpers.constants as constants
 
-class TrueU(Identifiers):
+class GeneralTypedefThenTrueT(Identifiers):
 
   @staticmethod
   def process(value):
-    if (value == 'e'):
-      return 'ReservedWords'
+    if (value == 'y'):
+      return 'TypedefY'
+    elif value == 'h':
+      return 'ThenH'
+    elif value == 'r':
+      return 'TrueR'
     elif value in constants.TO_IDENTIFIERS:
       return 'Identifiers'
     else:

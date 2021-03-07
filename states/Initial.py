@@ -9,11 +9,10 @@ class Initial(State):
     reservedWordsFirstLetters = ['v', 'c', 't', 's', 'e', 'p', 'f', 'r', 'i', 'w', 'b', 'g', 'l']
     # s -> struct, start, string feito
     # t -> typedef, then, true feito
+    # i -> if, int feito
+    # r -> return, real, read,
     # e -> extends, else
-    # r -> return, read,
     # p -> procedure, print
-    # i -> if, int
-    # r -> return, real
     # f -> function, false
 
     if value in stay:
@@ -23,9 +22,11 @@ class Initial(State):
     elif value == 'v':
       return 'VarV'
     elif value == 't':
-      return 'GeneralT'
+      return 'GeneralTypedefThenTrueT'
     elif value == 's':
       return 'GeneralStructStartStringS'
+    elif value == 'i':
+      return 'GeneralIfIntI'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:
