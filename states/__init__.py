@@ -35,4 +35,15 @@ from .reservedWords.middle.TypedefY import TypedefY
 from .reservedWords.middle.VarA import VarA
 from .reservedWords.middle.VarV import VarV
 
+from .reservedWords.middle.GeneralStructStartStringS import GeneralStructStartStringS
+from .reservedWords.middle.GeneralStructStartStringT import GeneralStructStartStringT
+from .reservedWords.middle.GeneralStructStringR import GeneralStructStringR
+
+from .reservedWords.middle.StructC import StructC
+from .reservedWords.middle.StructU import StructU
+from .reservedWords.middle.StartA import StartA
+from .reservedWords.middle.StartR import StartR
+from .reservedWords.middle.StringI import StringI
+from .reservedWords.middle.StringN import StringN
+
 from .identifiers.final.Identifiers import Identifiers

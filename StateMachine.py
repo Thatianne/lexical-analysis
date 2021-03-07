@@ -14,16 +14,14 @@ class StateMachine:
 
     symbol = reader.read()
     buffer.append(symbol)
-    stateName = Initial.process(symbol)
     state = Factory.get(Initial.process(symbol))
+
     if symbol == '\n':
         line = line + 1
 
     while True:
       symbol = reader.read()
 
-      if symbol == '':
-        break
       if symbol == '\n':
         line = line + 1
 
@@ -34,8 +32,10 @@ class StateMachine:
         buffer.clear()
 
       buffer.append(symbol)
-      stateName = state.process(symbol)
-      state = Factory.get(stateName)
+      state = Factory.get(state.process(symbol))
+
+      if symbol == '':
+        break
 
     reader.close()
     writer.close()

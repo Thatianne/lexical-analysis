@@ -1,3 +1,4 @@
 const name = "Thatianne"
 var age = 24
 var newAge = 24 + 1
+start struct string

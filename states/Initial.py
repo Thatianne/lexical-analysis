@@ -7,14 +7,13 @@ class Initial(State):
   def process(value):
     stay = [" ", "\n"]
     reservedWordsFirstLetters = ['v', 'c', 't', 's', 'e', 'p', 'f', 'r', 'i', 'w', 'b', 'g', 'l']
-    # s -> struct, start,
-    # e -> extends, else
+    # s -> struct, start, string feito
     # t -> typedef, then, true feito
+    # e -> extends, else
     # r -> return, read,
     # p -> procedure, print
     # i -> if, int
     # r -> return, real
-    # s -> start, string
     # f -> function, false
 
     if value in stay:
@@ -23,6 +22,10 @@ class Initial(State):
       return 'ConstC'
     elif value == 'v':
       return 'VarV'
+    elif value == 't':
+      return 'GeneralT'
+    elif value == 's':
+      return 'GeneralStructStartStringS'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:
