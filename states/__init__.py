@@ -57,4 +57,13 @@ from .reservedWords.middle.ReturnR import ReturnR
 from .reservedWords.middle.ReturnT import ReturnT
 from .reservedWords.middle.ReturnU import ReturnU
 
+from .reservedWords.middle.ElseL import ElseL
+from .reservedWords.middle.ElseS import ElseS
+from .reservedWords.middle.ExtendsD import ExtendsD
+from .reservedWords.middle.ExtendsE import ExtendsE
+from .reservedWords.middle.ExtendsN import ExtendsN
+from .reservedWords.middle.ExtendsT import ExtendsT
+from .reservedWords.middle.ExtendsX import ExtendsX
+from .reservedWords.middle.GeneralExtendsElseE import GeneralExtendsElseE
+
 from .identifiers.final.Identifiers import Identifiers

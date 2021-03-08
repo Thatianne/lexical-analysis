@@ -5,3 +5,4 @@ start struct string
 typedef then true
 if int
 return real read
+extends else

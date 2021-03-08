@@ -29,6 +29,8 @@ class Initial(State):
       return 'GeneralIfIntI'
     elif value == 'r':
       return 'GeneralReturnRealReadR'
+    elif value == 'e':
+      return 'GeneralExtendsElseE'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:
