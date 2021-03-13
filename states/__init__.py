@@ -77,4 +77,15 @@ from .reservedWords.middle.FunctionT import FunctionT
 from .reservedWords.middle.FunctionU import FunctionU
 from .reservedWords.middle.GeneralFunctionFalseF import GeneralFunctionFalseF
 
+from .reservedWords.middle.GeneralProcedurePrintP import GeneralProcedurePrintP
+from .reservedWords.middle.GeneralProcedurePrintR import GeneralProcedurePrintR
+from .reservedWords.middle.PrintI import PrintI
+from .reservedWords.middle.PrintN import PrintN
+from .reservedWords.middle.ProcedureC import ProcedureC
+from .reservedWords.middle.ProcedureD import ProcedureD
+from .reservedWords.middle.ProcedureEFirst import ProcedureEFirst
+from .reservedWords.middle.ProcedureO import ProcedureO
+from .reservedWords.middle.ProcedureR import ProcedureR
+from .reservedWords.middle.ProcedureU import ProcedureU
+
 from .identifiers.final.Identifiers import Identifiers

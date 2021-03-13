@@ -33,6 +33,8 @@ class Initial(State):
       return 'GeneralExtendsElseE'
     elif value == 'f':
       return 'GeneralFunctionFalseF'
+    elif value == 'p':
+      return 'GeneralProcedurePrintP'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:

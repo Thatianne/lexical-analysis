@@ -25,4 +25,6 @@
 07 PRE extends
 08 PRE else
 08 PRE function
-08 PRE false
+09 PRE false
+09 PRE procedure
+09 PRE print

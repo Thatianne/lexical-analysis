@@ -7,3 +7,4 @@ if int
 return real read
 extends else
 function false
+procedure print
