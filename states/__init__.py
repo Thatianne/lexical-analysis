@@ -66,4 +66,15 @@ from .reservedWords.middle.ExtendsT import ExtendsT
 from .reservedWords.middle.ExtendsX import ExtendsX
 from .reservedWords.middle.GeneralExtendsElseE import GeneralExtendsElseE
 
+from .reservedWords.middle.FalseA import FalseA
+from .reservedWords.middle.FalseL import FalseL
+from .reservedWords.middle.FalseS import FalseS
+from .reservedWords.middle.FunctionC import FunctionC
+from .reservedWords.middle.FunctionN import FunctionN
+from .reservedWords.middle.FunctionI import FunctionI
+from .reservedWords.middle.FunctionO import FunctionO
+from .reservedWords.middle.FunctionT import FunctionT
+from .reservedWords.middle.FunctionU import FunctionU
+from .reservedWords.middle.GeneralFunctionFalseF import GeneralFunctionFalseF
+
 from .identifiers.final.Identifiers import Identifiers

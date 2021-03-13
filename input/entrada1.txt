@@ -6,3 +6,4 @@ typedef then true
 if int
 return real read
 extends else
+function false

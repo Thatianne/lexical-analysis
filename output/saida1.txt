@@ -23,4 +23,6 @@
 06 PRE real
 07 PRE read
 07 PRE extends
-07 PRE else
+08 PRE else
+08 PRE function
+08 PRE false

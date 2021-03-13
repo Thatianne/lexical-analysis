@@ -11,9 +11,9 @@ class Initial(State):
     # t -> typedef, then, true feito
     # i -> if, int feito
     # r -> return, real, read feito
-    # e -> extends, else
+    # e -> extends, else feito
     # p -> procedure, print
-    # f -> function, false
+    # f -> function, false feito
 
     if value in stay:
       return 'Initial'
@@ -31,6 +31,8 @@ class Initial(State):
       return 'GeneralReturnRealReadR'
     elif value == 'e':
       return 'GeneralExtendsElseE'
+    elif value == 'f':
+      return 'GeneralFunctionFalseF'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:
