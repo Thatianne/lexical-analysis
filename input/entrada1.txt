@@ -30,3 +30,8 @@ true != false
 1 / 1
 age ++
 age --
+
+// comentário de linha
+/* comentário
+de bloco
+*/  name

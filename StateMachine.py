@@ -24,14 +24,11 @@ class StateMachine:
       # print(symbol)
       symbol = reader.read()
 
-      if state.willGoToInitial(symbol):
-        token = ''
-        if state.isError():
+      if state.willGoToInitial(symbol) and state.isFinalState():
+        if not state.ignore():
           token = state.getToken(buffer, line)
-        elif state.isFinalState():
-          token = state.getToken(buffer, line)
-        print(token)
-        writer.write(token)
+          print(token)
+          writer.write(token)
         buffer.clear()
 
       buffer.append(symbol)

@@ -8,4 +8,4 @@ class Point(State):
     if value in constants.NUMBERS:
       return 'NumbersFloat'
     else:
-      return 'Errors'
+      return 'ErrorsNumber'

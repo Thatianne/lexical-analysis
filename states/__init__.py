@@ -21,6 +21,11 @@ from .relationalOperators.final.RelationalOperators import RelationalOperators
 from .relationalOperators.final.RelationalOperatorsEquals import RelationalOperatorsEquals
 # from .relationalOperators.middle.EqualsGreaterLess import EqualsGreaterLess
 
+from .comments.final.BlockComment import BlockComment
+from .comments.final.LineComment import LineComment
+from .comments.middle.BlockCommentAsteriskFirst import BlockCommentAsteriskFirst
+from .comments.middle.BlockCommentAsteriskSecond import BlockCommentAsteriskSecond
+
 from .arithmeticOperators.final.Decrement import Decrement
 from .arithmeticOperators.final.Division import Division
 from .arithmeticOperators.final.Increment import Increment

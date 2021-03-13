@@ -5,7 +5,11 @@ class Division(Final):
 
   @staticmethod
   def process(value):
-    if value in constants.TO_INITIAL:
+    if value == '/':
+      return 'LineComment'
+    elif value == '*':
+      return 'BlockCommentAsteriskFirst'
+    elif value in constants.TO_INITIAL:
       return 'Initial'
     else:
       return 'Errors'

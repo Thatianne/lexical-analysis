@@ -1,7 +1,7 @@
-from states.State import State
+from states.Final import Final
 import helpers.constants as constants
 
-class ErrorsNumber(State):
+class ErrorsNumber(Final):
 
   @staticmethod
   def process(value):

@@ -26,3 +26,7 @@ class State:
   @staticmethod
   def isError():
     return False
+
+  @staticmethod
+  def ignore():
+    return False
