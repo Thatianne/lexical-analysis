@@ -4,9 +4,11 @@ from .Initial import Initial
 
 from .characters.final.Characters import Characters
 from .characters.middle.QuotationMarksOpen import QuotationMarksOpen
+from .characters.middle.Scape import Scape
 
 from .errors.Errors import Errors
 from .errors.ErrorsNumber import ErrorsNumber
+from .errors.ErrorsCharacters import ErrorsCharacters
 
 from .logicalOperators.final.LogicalOperatorsNegation import LogicalOperatorsNegation
 from .logicalOperators.final.LogicalOperators import LogicalOperators
@@ -19,7 +21,6 @@ from .numbers.middle.Point import Point
 
 from .relationalOperators.final.RelationalOperators import RelationalOperators
 from .relationalOperators.final.RelationalOperatorsEquals import RelationalOperatorsEquals
-# from .relationalOperators.middle.EqualsGreaterLess import EqualsGreaterLess
 
 from .comments.final.BlockComment import BlockComment
 from .comments.final.LineComment import LineComment

@@ -37,3 +37,7 @@ de bloco
 */  name
 
 ; , ( ) { } [ ] .
+
+"meu nome"
+"meu nome com \" barra"
+"meu nome com \" barra > <<

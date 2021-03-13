@@ -34,7 +34,7 @@ class StateMachine:
       buffer.append(symbol)
       state = Factory.get(state.process(symbol))
 
-      if symbol == '':
+      if symbol == '' and not state.isFinalState():
         break
       if symbol == '\n':
         line = line + 1

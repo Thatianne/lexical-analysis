@@ -79,3 +79,6 @@
 39 DEL [
 39 DEL ]
 39 DEL .
+41 CAD "meu nome"
+42 CAD "meu nome com \" barra"
+43 CMF "meu nome com \" barra > <<
