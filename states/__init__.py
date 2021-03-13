@@ -88,4 +88,27 @@ from .reservedWords.middle.ProcedureO import ProcedureO
 from .reservedWords.middle.ProcedureR import ProcedureR
 from .reservedWords.middle.ProcedureU import ProcedureU
 
+from .reservedWords.middle.BooleanA import BooleanA
+from .reservedWords.middle.BooleanB import BooleanB
+from .reservedWords.middle.BooleanE import BooleanE
+from .reservedWords.middle.BooleanL import BooleanL
+from .reservedWords.middle.BooleanOFirst import BooleanOFirst
+from .reservedWords.middle.BooleanOSecond import BooleanOSecond
+
+from .reservedWords.middle.GlobalA import GlobalA
+from .reservedWords.middle.GlobalB import GlobalB
+from .reservedWords.middle.GlobalG import GlobalG
+from .reservedWords.middle.GlobalL import GlobalL
+from .reservedWords.middle.GlobalO import GlobalO
+
+from .reservedWords.middle.LocalA import LocalA
+from .reservedWords.middle.LocalC import LocalC
+from .reservedWords.middle.LocalL import LocalL
+from .reservedWords.middle.LocalO import LocalO
+
+from .reservedWords.middle.WhileH import WhileH
+from .reservedWords.middle.WhileI import WhileI
+from .reservedWords.middle.WhileL import WhileL
+from .reservedWords.middle.WhileW import WhileW
+
 from .identifiers.final.Identifiers import Identifiers

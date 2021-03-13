@@ -5,17 +5,7 @@ class Initial(State):
 
   @staticmethod
   def process(value):
-    stay = [" ", "\n"]
-    reservedWordsFirstLetters = ['v', 'c', 't', 's', 'e', 'p', 'f', 'r', 'i', 'w', 'b', 'g', 'l']
-    # s -> struct, start, string feito
-    # t -> typedef, then, true feito
-    # i -> if, int feito
-    # r -> return, real, read feito
-    # e -> extends, else feito
-    # p -> procedure, print
-    # f -> function, false feito
-
-    if value in stay:
+    if value in constants.TO_INITIAL:
       return 'Initial'
     elif value == 'c':
       return 'ConstC'
@@ -35,6 +25,14 @@ class Initial(State):
       return 'GeneralFunctionFalseF'
     elif value == 'p':
       return 'GeneralProcedurePrintP'
+    elif value == 'w':
+      return 'WhileW'
+    elif value == 'b':
+      return 'BooleanB'
+    elif value == 'g':
+      return 'GlobalG'
+    elif value == 'l':
+      return 'LocalL'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:

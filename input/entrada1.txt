@@ -1,6 +1,8 @@
 const name = "Thatianne"
 var age = 24
 var newAge = 24 + 1
+
+var const
 start struct string
 typedef then true
 if int
@@ -8,3 +10,4 @@ return real read
 extends else
 function false
 procedure print
+while boolean global local
