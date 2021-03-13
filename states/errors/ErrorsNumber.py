@@ -8,7 +8,7 @@ class ErrorsNumber(Final):
     if value in constants.TO_INITIAL:
       return 'Initial'
     else:
-      return 'Errors'
+      return 'ErrorsNumber'
 
   @classmethod
   def getType(self):

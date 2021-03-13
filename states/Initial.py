@@ -55,5 +55,7 @@ class Initial(State):
       return 'LogicalOperatorsNegation'
     elif value in constants.TO_RELATIONAL_OPS:
       return 'RelationalOperators'
+    elif value in constants.TO_DELIMITATORS:
+      return 'Delimitators'
     else:
       return 'Errors'

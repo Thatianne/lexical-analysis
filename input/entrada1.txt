@@ -35,3 +35,5 @@ age --
 /* comentário
 de bloco
 */  name
+
+; , ( ) { } [ ] .
