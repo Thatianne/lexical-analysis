@@ -12,11 +12,11 @@ class NumbersDecimal(Final):
     elif value in constants.TO_INITIAL:
       return 'Initial'
     else:
-      return 'Errors'
+      return 'ErrorsNumber'
 
   @staticmethod
   def willGoToInitial(value):
-    return value not in constants.NUMBERS
+    return value in constants.TO_INITIAL
 
   @classmethod
   def getType(self):

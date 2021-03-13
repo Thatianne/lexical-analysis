@@ -33,6 +33,18 @@ class Initial(State):
       return 'GlobalG'
     elif value == 'l':
       return 'LocalL'
+    elif value == '&':
+      return 'And'
+    elif value == '|':
+      return 'Pipe'
+    elif value == '+':
+      return 'Sum'
+    elif value == '-':
+      return 'Subtraction'
+    elif value == '/':
+      return 'Division'
+    elif value == '*':
+      return 'Multiplication'
     elif value in constants.LETTERS:
       return 'Identifiers'
     elif value in constants.NUMBERS:

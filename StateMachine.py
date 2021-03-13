@@ -10,7 +10,7 @@ class StateMachine:
     reader = Reader(inputFileName)
     writer = Writer(outputFileName)
     buffer = []
-    line = 0
+    line = 1
 
     symbol = reader.read()
     buffer.append(symbol)
@@ -20,13 +20,16 @@ class StateMachine:
         line = line + 1
 
     while True:
+      # print(state)
+      # print(symbol)
       symbol = reader.read()
 
-      if symbol == '\n':
-        line = line + 1
-
-      if state.isFinalState() and state.willGoToInitial(symbol):
-        token = state.getToken(buffer, line)
+      if state.willGoToInitial(symbol):
+        token = ''
+        if state.isError():
+          token = state.getToken(buffer, line)
+        elif state.isFinalState():
+          token = state.getToken(buffer, line)
         print(token)
         writer.write(token)
         buffer.clear()
@@ -36,6 +39,8 @@ class StateMachine:
 
       if symbol == '':
         break
+      if symbol == '\n':
+        line = line + 1
 
     reader.close()
     writer.close()

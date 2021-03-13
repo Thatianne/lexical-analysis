@@ -1,7 +1,7 @@
 from states.State import State
 import helpers.constants as constants
 
-class Errors(State):
+class ErrorsNumber(State):
 
   @staticmethod
   def process(value):
@@ -12,7 +12,7 @@ class Errors(State):
 
   @classmethod
   def getType(self):
-    return 'ERR'
+    return 'NMF'
 
   @staticmethod
   def willGoToInitial(value):

@@ -1,7 +1,3 @@
-const name = "Thatianne"
-var age = 24
-var newAge = 24 + 1
-
 var const
 start struct string
 typedef then true
@@ -11,3 +7,26 @@ extends else
 function false
 procedure print
 while boolean global local
+
+! false
+true && false
+true || false
+
+true == true
+true != false
+0 > 1
+0 >= 1
+0 < 1
+0 <= 1
+0 = 1
+
+2.1
+21545.578.78
+21545.57878
+
+1 + 1
+1 - 1
+1 * 1
+1 / 1
+age ++
+age --

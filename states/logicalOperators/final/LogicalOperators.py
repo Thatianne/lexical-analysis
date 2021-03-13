@@ -1,6 +1,6 @@
 from states.Final import Final
 
-class RelationalOperators(Final):
+class LogicalOperators(Final):
 
   @staticmethod
   def process(value):
@@ -11,8 +11,4 @@ class RelationalOperators(Final):
 
   @classmethod
   def getType(self):
-    return 'REL'
-
-  @staticmethod
-  def willGoToInitial(value):
-    return value != '='
+    return 'LOG'

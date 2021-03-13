@@ -6,8 +6,12 @@ from .characters.final.Characters import Characters
 from .characters.middle.QuotationMarksOpen import QuotationMarksOpen
 
 from .errors.Errors import Errors
+from .errors.ErrorsNumber import ErrorsNumber
 
 from .logicalOperators.final.LogicalOperatorsNegation import LogicalOperatorsNegation
+from .logicalOperators.final.LogicalOperators import LogicalOperators
+from .logicalOperators.middle.And import And
+from .logicalOperators.middle.Pipe import Pipe
 
 from .numbers.final.NumbersDecimal import NumbersDecimal
 from .numbers.final.NumbersFloat import NumbersFloat
@@ -16,6 +20,13 @@ from .numbers.middle.Point import Point
 from .relationalOperators.final.RelationalOperators import RelationalOperators
 from .relationalOperators.final.RelationalOperatorsEquals import RelationalOperatorsEquals
 # from .relationalOperators.middle.EqualsGreaterLess import EqualsGreaterLess
+
+from .arithmeticOperators.final.Decrement import Decrement
+from .arithmeticOperators.final.Division import Division
+from .arithmeticOperators.final.Increment import Increment
+from .arithmeticOperators.final.Multiplication import Multiplication
+from .arithmeticOperators.final.Subtraction import Subtraction
+from .arithmeticOperators.final.Sum import Sum
 
 from .reservedWords.final.ReservedWords import ReservedWords
 from .reservedWords.middle.ConstC import ConstC

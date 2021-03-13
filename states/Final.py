@@ -1,4 +1,5 @@
 from states.State import State
+import helpers.constants as constants
 
 class Final(State):
 
@@ -8,4 +9,4 @@ class Final(State):
 
   @staticmethod
   def willGoToInitial(value):
-    return True
+    return value in constants.TO_INITIAL

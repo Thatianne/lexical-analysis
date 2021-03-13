@@ -6,7 +6,6 @@ class Point(State):
   @staticmethod
   def process(value):
     if value in constants.NUMBERS:
-      return 'NumbersDecimal'
+      return 'NumbersFloat'
     else:
-      from states.errors.Errors import Errors
       return 'Errors'

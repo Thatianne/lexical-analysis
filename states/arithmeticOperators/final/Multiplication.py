@@ -1,7 +1,7 @@
-from states.State import State
+from states.Final import Final
 import helpers.constants as constants
 
-class Errors(State):
+class Multiplication(Final):
 
   @staticmethod
   def process(value):
@@ -12,12 +12,4 @@ class Errors(State):
 
   @classmethod
   def getType(self):
-    return 'ERR'
-
-  @staticmethod
-  def willGoToInitial(value):
-    return value in constants.TO_INITIAL
-
-  @staticmethod
-  def isError():
-    return True
+    return 'ART'

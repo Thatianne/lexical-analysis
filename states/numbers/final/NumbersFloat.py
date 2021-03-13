@@ -7,12 +7,14 @@ class NumbersFloat(Final):
   def process(value):
     if value in constants.NUMBERS:
       return 'NumbersFloat'
-    elif value == constants.TO_INITIAL:
+    elif value in constants.TO_INITIAL:
       return 'Initial'
+    else:
+      return 'ErrorsNumber'
 
   @staticmethod
   def willGoToInitial(value):
-    return value not in constants.NUMBERS
+    return value in constants.TO_INITIAL
 
   @classmethod
   def getType(self):

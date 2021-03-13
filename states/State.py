@@ -21,4 +21,8 @@ class State:
 
   @staticmethod
   def willGoToInitial(value):
-    return True
+    return False
+
+  @staticmethod
+  def isError():
+    return False

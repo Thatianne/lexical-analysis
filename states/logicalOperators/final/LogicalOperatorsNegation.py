@@ -12,3 +12,7 @@ class LogicalOperatorsNegation(Final):
   @classmethod
   def getType(self):
     return 'LOG'
+
+  @staticmethod
+  def willGoToInitial(value):
+    return value != '='
