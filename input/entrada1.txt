@@ -41,3 +41,5 @@ de bloco
 "meu nome"
 "meu nome com \" barra"
 "meu nome com \" barra > <<
+
+/*comentário com erro*

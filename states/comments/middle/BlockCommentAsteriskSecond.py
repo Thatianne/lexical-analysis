@@ -7,7 +7,7 @@ class BlockCommentAsteriskSecond(State):
     if value == '/':
       return 'BlockComment'
     else:
-      return 'Errors'
+      return 'ErrorsComment'
 
   @classmethod
   def getType(self):

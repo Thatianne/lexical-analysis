@@ -7,7 +7,7 @@ class Pipe(State):
     if value == '|':
       return 'LogicalOperators'
     else:
-      return 'Errors'
+      return 'ErrorsOperator'
 
   @classmethod
   def getType(self):

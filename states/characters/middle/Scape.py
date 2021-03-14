@@ -11,4 +11,4 @@ class Scape(State):
     elif value in constants.TO_CHARACTERS or (asciiValue >= 32 and asciiValue <=126):
       return 'QuotationMarksOpen'
     else:
-      return 'ErrorsCharacters'
+      return 'ErrorsCharacter'

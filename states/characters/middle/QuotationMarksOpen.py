@@ -16,8 +16,8 @@ class QuotationMarksOpen(State):
     elif value in constants.TO_CHARACTERS or (asciiValue >= 32 and asciiValue <=126):
       return 'QuotationMarksOpen'
     elif value == '\n' or value == '':
-      return 'ErrorsCharacters'
+      return 'ErrorsCharacter'
     elif value in constants.TO_INITIAL:
       return 'Initial'
     else:
-      return 'ErrorsCharacters'
+      return 'ErrorsCharacter'

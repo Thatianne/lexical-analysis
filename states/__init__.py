@@ -8,7 +8,9 @@ from .characters.middle.Scape import Scape
 
 from .errors.Errors import Errors
 from .errors.ErrorsNumber import ErrorsNumber
-from .errors.ErrorsCharacters import ErrorsCharacters
+from .errors.ErrorsCharacter import ErrorsCharacter
+from .errors.ErrorsComment import ErrorsComment
+from .errors.ErrorsOperator import ErrorsOperator
 
 from .logicalOperators.final.LogicalOperatorsNegation import LogicalOperatorsNegation
 from .logicalOperators.final.LogicalOperators import LogicalOperators

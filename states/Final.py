@@ -9,4 +9,4 @@ class Final(State):
 
   @staticmethod
   def willGoToInitial(value):
-    return value in constants.TO_INITIAL
+    return value in constants.TO_INITIAL or value in constants.TO_DELIMITATORS

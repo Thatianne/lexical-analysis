@@ -51,7 +51,9 @@
 21 REL =
 21 NRO 1
 23 NRO 2.1
-24 NMF 21545.578.78
+24 NRO 21545.578
+24 DEL .
+24 NRO 78
 25 NRO 21545.57878
 27 NRO 1
 27 ART +
@@ -81,4 +83,5 @@
 39 DEL .
 41 CAD "meu nome"
 42 CAD "meu nome com \" barra"
-43 CMF "meu nome com \" barra > <<
+44 CMF "meu nome com \" barra > <<
+45 CoMF /*comentário com erro*

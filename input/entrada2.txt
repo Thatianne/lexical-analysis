@@ -2,6 +2,6 @@ name = "Thatianne"
 age = 25
 h = 1.50
 
-if ( age == 25 ) {
-  print ( "Tenho " + age + "anos" )
+if(age == 25){
+  print("Tenho " + age + "anos")
 }

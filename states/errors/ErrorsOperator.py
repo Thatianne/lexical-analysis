@@ -1,18 +1,18 @@
 from states.Final import Final
 import helpers.constants as constants
 
-class ErrorsCharacters(Final):
+class ErrorsOperator(Final):
 
   @staticmethod
   def process(value):
     if value in constants.TO_INITIAL:
       return 'Initial'
     else:
-      return 'ErrorsCharacters'
+      return 'ErrorsOperator'
 
   @classmethod
   def getType(self):
-    return 'CMF'
+    return 'OpMF'
 
   @staticmethod
   def willGoToInitial(value):

@@ -12,7 +12,7 @@ class Division(Final):
     elif value in constants.TO_INITIAL:
       return 'Initial'
     else:
-      return 'Errors'
+      return 'ErrorsOperator'
 
   @classmethod
   def getType(self):

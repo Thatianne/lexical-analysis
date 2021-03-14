@@ -6,6 +6,8 @@ class BlockCommentAsteriskFirst(State):
   def process(value):
     if value == '*':
       return 'BlockCommentAsteriskSecond'
+    elif value == '':
+      return 'ErrorsComment'
     else:
       return 'BlockCommentAsteriskFirst'
 

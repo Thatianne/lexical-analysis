@@ -9,6 +9,8 @@ class NumbersDecimal(Final):
       return 'NumbersDecimal'
     elif value == '.':
       return 'Point'
+    elif value in constants.TO_DELIMITATORS:
+      return 'Delimitators'
     elif value in constants.TO_INITIAL:
       return 'Initial'
     else:
@@ -16,7 +18,7 @@ class NumbersDecimal(Final):
 
   @staticmethod
   def willGoToInitial(value):
-    return value in constants.TO_INITIAL
+    return value in constants.TO_INITIAL or (value in constants.TO_DELIMITATORS and value != '.')
 
   @classmethod
   def getType(self):

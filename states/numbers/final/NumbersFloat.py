@@ -7,6 +7,8 @@ class NumbersFloat(Final):
   def process(value):
     if value in constants.NUMBERS:
       return 'NumbersFloat'
+    elif value in constants.TO_DELIMITATORS:
+      return 'Delimitators'
     elif value in constants.TO_INITIAL:
       return 'Initial'
     else:
@@ -14,7 +16,7 @@ class NumbersFloat(Final):
 
   @staticmethod
   def willGoToInitial(value):
-    return value in constants.TO_INITIAL
+    return value in constants.TO_INITIAL or value in constants.TO_DELIMITATORS
 
   @classmethod
   def getType(self):
