@@ -3,6 +3,7 @@ from helpers.Writer import Writer
 from states.Initial import Initial
 from states.Factory import Factory
 from helpers.BashColors import BashColors
+from helpers.SymbolTable import SymbolTable
 
 class StateMachine:
 
@@ -10,6 +11,9 @@ class StateMachine:
   def exec(inputFileName, outputFileName):
     reader = Reader(inputFileName)
     writer = Writer(outputFileName)
+    symbolTable = SymbolTable()
+
+    symbolTable.reset()
     buffer = []
     line = 1
     hasErrors = False
@@ -25,7 +29,8 @@ class StateMachine:
     while True:
       # print(state)
       # print(symbol)
-      symbol = reader.read()
+      if not state.jump(symbol):
+          symbol = reader.read()
 
       if state.isError():
         hasErrors = True
@@ -33,11 +38,12 @@ class StateMachine:
       if state.willGoToInitial(symbol) and state.isFinalState():
         if not state.ignore():
           token = state.getToken(buffer, line)
-          if state.isError():
-            print(BashColors.FAIL + token + BashColors.ENDC)
-          else:
-            print(BashColors.OKCYAN + token + BashColors.ENDC)
-          writer.write(token)
+          if not state.jump(symbol):
+            if state.isError():
+              print(BashColors.FAIL + token + BashColors.ENDC)
+            else:
+              print(BashColors.OKCYAN + token + BashColors.ENDC)
+            writer.write(token)
         buffer.clear()
 
       buffer.append(symbol)
@@ -52,6 +58,15 @@ class StateMachine:
       success = 'Success!'
       writer.write(success)
       print(BashColors.OKGREEN + success + BashColors.ENDC)
+
+    table = symbolTable.getAll()
+    headers = ['Key', 'Value']
+    rowFormat ="{:>10}" * (len(headers) + 1)
+
+    print(BashColors.HEADER + '\t\tSymbol Table' + BashColors.ENDC)
+    print(BashColors.OKCYAN + rowFormat.format('', *headers) + BashColors.ENDC)
+    for i in range(len(table)):
+      print(rowFormat.format('', *[i + 1, table[i]]))
 
     reader.close()
     writer.close()

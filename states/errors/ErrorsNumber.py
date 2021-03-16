@@ -1,12 +1,14 @@
-from states.Final import Final
+from states.errors.Errors import Errors
 import helpers.constants as constants
 
-class ErrorsNumber(Final):
+class ErrorsNumber(Errors):
 
   @staticmethod
   def process(value):
     if value in constants.TO_INITIAL:
       return 'Initial'
+    elif value in constants.TO_DELIMITATORS:
+      return 'Delimitators'
     else:
       return 'ErrorsNumber'
 
@@ -15,9 +17,5 @@ class ErrorsNumber(Final):
     return 'NMF'
 
   @staticmethod
-  def willGoToInitial(value):
-    return value in constants.TO_INITIAL
-
-  @staticmethod
-  def isError():
-    return True
+  def jump(value):
+    return value in constants.TO_DELIMITATORS and value != '.'

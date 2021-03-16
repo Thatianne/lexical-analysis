@@ -1,5 +1,7 @@
 from states.Final import Final
 import helpers.constants as constants
+from helpers.SymbolTable import SymbolTable
+symbolTable = SymbolTable()
 
 class Identifiers(Final):
 
@@ -12,10 +14,13 @@ class Identifiers(Final):
     else:
       return 'Errors'
 
-  @staticmethod
-  def willGoToInitial(value):
-    return value in constants.TO_INITIAL
-
   @classmethod
   def getType(self):
     return 'IDE'
+
+  @classmethod
+  def getToken(self, value, line):
+    value = "".join(value).strip()
+    index = symbolTable.add(value)
+    token = "{:02d} ".format(line) + self.getType() + " " + str(index)
+    return token

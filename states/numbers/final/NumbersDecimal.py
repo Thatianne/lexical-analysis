@@ -9,8 +9,6 @@ class NumbersDecimal(Final):
       return 'NumbersDecimal'
     elif value == '.':
       return 'Point'
-    elif value in constants.TO_DELIMITATORS:
-      return 'Delimitators'
     elif value in constants.TO_INITIAL:
       return 'Initial'
     else:

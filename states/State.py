@@ -30,3 +30,7 @@ class State:
   @staticmethod
   def ignore():
     return False
+
+  @staticmethod
+  def jump(value):
+    return False

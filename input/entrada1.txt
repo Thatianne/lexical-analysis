@@ -21,6 +21,7 @@ true != false
 0 = 1
 
 2.1
+2.1a
 21545.578.78
 21545.57878
 
@@ -34,12 +35,12 @@ age --
 // comentário de linha
 /* comentário
 de bloco
-*/  name
+*/ name
 
 ; , ( ) { } [ ] .
 
 "meu nome"
 "meu nome com \" barra"
 "meu nome com \" barra > <<
-
+"meu nome" + name
 /*comentário com erro*

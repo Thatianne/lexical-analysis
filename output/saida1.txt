@@ -51,37 +51,38 @@
 21 REL =
 21 NRO 1
 23 NRO 2.1
-24 NRO 21545.578
-24 DEL .
-24 NRO 78
-25 NRO 21545.57878
-27 NRO 1
-27 ART +
-27 NRO 1
+24 NMF 2.1a
+25 NMF 21545.578.78
+26 NRO 21545.57878
 28 NRO 1
-28 ART -
+28 ART +
 28 NRO 1
 29 NRO 1
-29 ART *
+29 ART -
 29 NRO 1
 30 NRO 1
-30 ART /
+30 ART *
 30 NRO 1
-31 IDE age
-31 ART ++
-32 IDE age
-32 ART --
-37 IDE name
-39 DEL ;
-39 DEL ,
-39 DEL (
-39 DEL )
-39 DEL {
-39 DEL }
-39 DEL [
-39 DEL ]
-39 DEL .
-41 CAD "meu nome"
-42 CAD "meu nome com \" barra"
-44 CMF "meu nome com \" barra > <<
-45 CoMF /*comentário com erro*
+31 NRO 1
+31 ART /
+31 NRO 1
+32 IDE 1
+32 ART ++
+33 IDE 1
+33 ART --
+38 IDE 2
+40 DEL ;
+40 DEL ,
+40 DEL (
+40 DEL )
+40 DEL {
+40 DEL }
+40 DEL [
+40 DEL ]
+40 DEL .
+42 CAD "meu nome"
+43 CAD "meu nome com \" barra"
+45 CMF "meu nome com \" barra > <<
+/*comentário
+45 IDE 3
+45 ERR erro*

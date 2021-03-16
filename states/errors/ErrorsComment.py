@@ -1,23 +1,17 @@
-from states.Final import Final
+from states.errors.Errors import Errors
 import helpers.constants as constants
 
-class ErrorsComment(Final):
+class ErrorsComment(Errors):
 
   @staticmethod
   def process(value):
     if value in constants.TO_INITIAL:
       return 'Initial'
+    elif value in constants.TO_DELIMITATORS:
+      return 'Delimitators'
     else:
       return 'ErrorsComment'
 
   @classmethod
   def getType(self):
     return 'CoMF'
-
-  @staticmethod
-  def willGoToInitial(value):
-    return value in constants.TO_INITIAL
-
-  @staticmethod
-  def isError():
-    return True
