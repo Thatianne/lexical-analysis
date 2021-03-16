@@ -83,6 +83,8 @@
 42 CAD "meu nome"
 43 CAD "meu nome com \" barra"
 45 CMF "meu nome com \" barra > <<
-/*comentário
-45 IDE 3
-45 ERR erro*
+"meu
+45 ERR nome"
+45 ART +
+45 IDE 2
+46 CoMF /*comentário com erro*
