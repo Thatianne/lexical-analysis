@@ -7,8 +7,6 @@ class ErrorsComment(Errors):
   def process(value):
     if value in constants.TO_INITIAL:
       return 'Initial'
-    elif value in constants.TO_DELIMITATORS:
-      return 'Delimitators'
     else:
       return 'ErrorsComment'
 

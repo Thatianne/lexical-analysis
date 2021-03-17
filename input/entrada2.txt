@@ -1,3 +1,4 @@
+name = "Thatianne ƒ"
 name = "Thatianne"
 age = 25
 h = 1.50

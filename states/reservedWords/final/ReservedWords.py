@@ -7,8 +7,6 @@ class ReservedWords(Final):
   def process(value):
     if value in constants.TO_INITIAL:
       return 'Initial'
-    elif value in constants.TO_IDENTIFIERS:
-      return 'Identifiers'
     else:
       return 'Errors'
 

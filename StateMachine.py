@@ -29,8 +29,10 @@ class StateMachine:
     while True:
       # print(state)
       # print(symbol)
-      if not state.jump(symbol):
-          symbol = reader.read()
+      symbol = reader.read()
+      if state.jump(symbol):
+        state = Factory.get(Initial.process(symbol))
+
 
       if state.isError():
         hasErrors = True

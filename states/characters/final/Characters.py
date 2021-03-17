@@ -8,7 +8,7 @@ class Characters(Final):
     if value in constants.TO_INITIAL:
       return 'Initial'
     else:
-      return 'Errors'
+      return 'ErrorsCharacter'
 
   @classmethod
   def getType(self):

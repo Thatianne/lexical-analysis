@@ -19,3 +19,7 @@ class NumbersFloat(Final):
   @classmethod
   def getType(self):
     return 'NRO'
+
+  @staticmethod
+  def jump(value):
+    return value in constants.TO_DELIMITATORS and value != '.'

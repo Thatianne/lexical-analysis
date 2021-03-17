@@ -1,25 +1,23 @@
 01 IDE 1
 01 REL =
-01 CAD "Thatianne"
-02 IDE 2
+01 CMF "Thatianne ƒ"
+02 IDE 1
 02 REL =
-02 NRO 25
-03 IDE 3
+02 CAD "Thatianne"
+03 IDE 2
 03 REL =
-03 NRO 1.50
-05 PRE if
-05 DEL (
-05 IDE 2
-05 REL ==
-05 NRO 25
-05 DEL )
-05 DEL {
-06 PRE print
+03 NRO 25
+04 IDE 3
+04 REL =
+04 NRO 1.50
 06 DEL (
-06 CAD "Tenho "
-06 ART +
 06 IDE 2
-06 ART +
-06 CAD "anos"
-06 DEL )
-07 DEL }
+06 REL ==
+06 DEL {
+07 DEL (
+07 CAD "Tenho "
+07 ART +
+07 IDE 2
+07 ART +
+07 DEL )
+08 DEL }

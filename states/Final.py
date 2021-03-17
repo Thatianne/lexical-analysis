@@ -10,3 +10,7 @@ class Final(State):
   @staticmethod
   def willGoToInitial(value):
     return value in constants.TO_INITIAL or value in constants.TO_DELIMITATORS
+
+  @staticmethod
+  def jump(value):
+    return value in constants.TO_DELIMITATORS
