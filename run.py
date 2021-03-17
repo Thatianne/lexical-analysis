@@ -1,4 +1,17 @@
 from StateMachine import StateMachine
+from os import listdir, unlink
+from os.path import isfile, join
 
-StateMachine.exec('input/entrada1.txt', 'output/saida1.txt')
-StateMachine.exec('input/entrada2.txt', 'output/saida2.txt')
+path = './output'
+oldOutputs = [f for f in listdir(path) if isfile(join(path, f))]
+
+for file in oldOutputs:
+  filePath = join('output', file)
+  unlink(filePath)
+
+path = './input'
+files = [f for f in listdir(path) if isfile(join(path, f))]
+
+for file in files:
+  index = file[7:-4]
+  StateMachine.exec('input/' + file, 'output/saida' + index + '.txt')
