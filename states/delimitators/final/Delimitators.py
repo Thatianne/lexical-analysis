@@ -14,3 +14,7 @@ class Delimitators(Final):
   @classmethod
   def getType(self):
     return 'DEL'
+
+  @staticmethod
+  def jump(value):
+    return False

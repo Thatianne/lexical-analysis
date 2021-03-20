@@ -4,6 +4,7 @@ from states.Initial import Initial
 from states.Factory import Factory
 from helpers.BashColors import BashColors
 from helpers.SymbolTable import SymbolTable
+import helpers.constants as constants
 
 class StateMachine:
 
@@ -19,42 +20,42 @@ class StateMachine:
     hasErrors = False
 
     print(BashColors.HEADER + inputFileName + BashColors.ENDC)
-    symbol = reader.read()
-    buffer.append(symbol)
-    state = Factory.get(Initial.process(symbol))
-
-    if symbol == '\n':
-        line = line + 1
+    state = Initial
+    symbol = ''
 
     while True:
-      # print(state)
-      # print(symbol)
-      symbol = reader.read()
-      if state.jump(symbol):
+      if not state.jump(symbol):
+        symbol = reader.read()
+        buffer.append(symbol)
+      else:
         state = Factory.get(Initial.process(symbol))
 
+      if symbol == '\n':
+        line = line + 1
+      if symbol == '':
+        break
 
-      if state.isError():
-        hasErrors = True
+      # print(state)
+      # print(symbol)
+      state = Factory.get(state.process(symbol))
 
-      if state.willGoToInitial(symbol) and state.isFinalState():
-        if not state.ignore():
-          token = state.getToken(buffer, line)
-          if not state.jump(symbol):
+      if state.isFinalState():
+        nextSymbol = reader.read()
+        reader.back()
+        if state.willGoToInitial(nextSymbol):
+          if not state.ignore():
+            lexema = "".join(buffer).strip()
+            if lexema in constants.RESERVED_WORDS:
+              state = Factory.get('ReservedWords')
+              token = state.getToken(buffer, line)
+            else:
+              token = state.getToken(buffer, line)
             if state.isError():
               print(BashColors.FAIL + token + BashColors.ENDC)
             else:
               print(BashColors.OKCYAN + token + BashColors.ENDC)
             writer.write(token)
-        buffer.clear()
-
-      buffer.append(symbol)
-      state = Factory.get(state.process(symbol))
-
-      if symbol == '' and not state.isFinalState():
-        break
-      if symbol == '\n':
-        line = line + 1
+          buffer.clear()
 
     if not hasErrors:
       success = 'Success!'

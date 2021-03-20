@@ -7,32 +7,6 @@ class Initial(State):
   def process(value):
     if value in constants.TO_INITIAL:
       return 'Initial'
-    elif value == 'c':
-      return 'ConstC'
-    elif value == 'v':
-      return 'VarV'
-    elif value == 't':
-      return 'GeneralTypedefThenTrueT'
-    elif value == 's':
-      return 'GeneralStructStartStringS'
-    elif value == 'i':
-      return 'GeneralIfIntI'
-    elif value == 'r':
-      return 'GeneralReturnRealReadR'
-    elif value == 'e':
-      return 'GeneralExtendsElseE'
-    elif value == 'f':
-      return 'GeneralFunctionFalseF'
-    elif value == 'p':
-      return 'GeneralProcedurePrintP'
-    elif value == 'w':
-      return 'WhileW'
-    elif value == 'b':
-      return 'BooleanB'
-    elif value == 'g':
-      return 'GlobalG'
-    elif value == 'l':
-      return 'LocalL'
     elif value == '&':
       return 'And'
     elif value == '|':

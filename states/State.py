@@ -1,3 +1,5 @@
+import helpers.constants as constants
+
 class State:
 
   @staticmethod
@@ -33,4 +35,4 @@ class State:
 
   @staticmethod
   def jump(value):
-    return False
+    return value in constants.TO_DELIMITATORS

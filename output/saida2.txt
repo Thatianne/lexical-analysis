@@ -7,15 +7,22 @@
 04 IDE 3
 04 REL =
 04 NRO 1.50
+06 PRE if
 06 DEL (
 06 IDE 2
 06 REL ==
+06 NRO 25
+06 NMF )
+06 DEL 
 06 DEL {
+07 PRE print
 07 DEL (
 07 CAD "Tenho "
 07 ART +
 07 IDE 2
 07 ART +
-07 DEL )
+07 CAD "anos"
+07 CMF )
+07 DEL 
 08 DEL }
 Success!

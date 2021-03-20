@@ -9,3 +9,7 @@ class Point(State):
       return 'NumbersFloat'
     else:
       return 'ErrorsNumber'
+
+  @staticmethod
+  def jump(value):
+    return value in constants.TO_DELIMITATORS and value != '.'

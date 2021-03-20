@@ -5,10 +5,10 @@ class ErrorsCharacter(Errors):
 
   @staticmethod
   def process(value):
-    if value in constants.TO_INITIAL:
-      return 'Initial'
-    else:
-      return 'ErrorsCharacter'
+    return 'Initial'
+    # if value in constants.TO_INITIAL:
+    # else:
+    #   return 'ErrorsCharacter'
 
   @classmethod
   def getType(self):
@@ -16,4 +16,8 @@ class ErrorsCharacter(Errors):
 
   @staticmethod
   def jump(value):
-    return value in constants.TO_DELIMITATORS
+    return True
+
+  @staticmethod
+  def willGoToInitial(value):
+    return True
