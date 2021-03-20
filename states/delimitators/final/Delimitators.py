@@ -5,7 +5,7 @@ class Delimitators(Final):
 
   @staticmethod
   def process(value):
-    return Initial.process(value)
+    return 'Initial'
 
   @staticmethod
   def willGoToInitial(value):
@@ -17,4 +17,4 @@ class Delimitators(Final):
 
   @staticmethod
   def jump(value):
-    return False
+    return True

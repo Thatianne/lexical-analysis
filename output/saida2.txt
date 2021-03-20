@@ -12,8 +12,7 @@
 06 IDE 2
 06 REL ==
 06 NRO 25
-06 NMF )
-06 DEL 
+06 DEL )
 06 DEL {
 07 PRE print
 07 DEL (
@@ -22,7 +21,6 @@
 07 IDE 2
 07 ART +
 07 CAD "anos"
-07 CMF )
-07 DEL 
+07 DEL )
 08 DEL }
 Success!

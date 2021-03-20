@@ -83,7 +83,6 @@
 42 CAD "meu nome"
 43 CAD "meu nome com \" barra"
 45 CMF "meu nome com \" barra > <<
-46 CAD "meu nome"
-46 ART +
-46 IDE 2
-Success!
+45 CAD "meu nome"
+45 ART +
+45 IDE 2

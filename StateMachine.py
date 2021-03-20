@@ -24,11 +24,11 @@ class StateMachine:
     symbol = ''
 
     while True:
-      if not state.jump(symbol):
-        symbol = reader.read()
-        buffer.append(symbol)
-      else:
-        state = Factory.get(Initial.process(symbol))
+      symbol = reader.read()
+      buffer.append(symbol)
+
+      if state.jump(symbol):
+        state = Initial
 
       if symbol == '\n':
         line = line + 1
@@ -51,6 +51,7 @@ class StateMachine:
             else:
               token = state.getToken(buffer, line)
             if state.isError():
+              hasErrors = True
               print(BashColors.FAIL + token + BashColors.ENDC)
             else:
               print(BashColors.OKCYAN + token + BashColors.ENDC)
