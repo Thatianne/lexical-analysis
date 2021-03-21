@@ -13,14 +13,13 @@
 06 REL ==
 06 NRO 25
 06 DEL )
-06 DEL {
-07 PRE print
-07 DEL (
-07 CAD "Tenho "
-07 ART +
-07 IDE 2
-07 ART +
-07 CAD "anos"
-07 DEL )
-08 DEL }
+07 PRE then
+08 PRE print
+08 DEL (
+08 CAD "Tenho "
+08 ART +
+08 IDE 2
+08 ART +
+08 CAD "anos"
+08 DEL )
 Success!

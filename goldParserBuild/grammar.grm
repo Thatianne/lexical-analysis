@@ -1,0 +1,93 @@
+"Case Sensitive" = False
+
+{String Ch} = {Printable} - ["]
+{Char Ch} = {Printable} - ['']
+Identifier = {Letter}{AlphaNumeric}*
+Whitespace = {Whitespace}+
+DecLiteral = {Digit}+
+RealLiteral = {Digit}*'.'{Digit}+
+StringLiteral  = '"'( {String Ch} | '\'{Printable} )* '"'
+CharLiteral    = '' ( {Char Ch} | '\'{Printable} )''
+
+"Start Symbol" = <Declarations>
+
+<Declarations> ::= <Declaration> <Declarations>
+    | <Declaration>
+
+<Declaration> ::= <Var Decs>
+    | <Const Decs>
+
+! **** Types ****
+
+<Types>
+    ::= 'int '
+    | 'real '
+    | 'boolean '
+    | 'string '
+
+! **** Var declaration ****
+<Var Decs>
+    ::= 'var {' <Var Decs Inner> '}'
+
+<Var Decs Inner>
+    ::= <Var Declarator> ',' <Var Decs Inner>
+    | <Var Declarator>
+
+<Var Declarator>
+    ::= <Types> Identifier
+
+! **** Const declaration ****
+<Const Decs>
+    ::= 'const {' <Const Decs Inner> '}'
+
+<Const Decs Inner>
+    ::= <Const Declarator> ',' <Const Decs Inner>
+    | <Const Declarator>
+
+<Const Declarator>
+    ::= <Types> Identifier '=' <Expression>
+    | <Types> Identifier
+
+! **** Expressions ****
+<Expression>
+    ::= DecLiteral
+    | RealLiteral
+    | StringLiteral
+!   | <Or Exp>
+
+<Or Exp>
+    ::= <Or Exp> '||' <And Exp>
+    |  <And Exp>
+
+<And Exp>
+    ::= <And Exp> '&&' <Equality Exp>
+
+<Equality Exp>
+    ::= <Equality Exp> '==' <Compare Exp>
+    |  <Equality Exp> '!=' <Compare Exp>
+    |  <Compare Exp>
+
+<Compare Exp>
+    ::= <Compare Exp> '<' <Add Exp>
+    |  <Compare Exp> '>'  <Add Exp>
+    |  <Compare Exp> '<=' <Add Exp>
+    |  <Compare Exp> '>=' <Add Exp>
+    | <Add Exp>
+
+<Add Exp>
+    ::= <Add Exp> '+' <Mult Exp>
+    |  <Add Exp> '-' <Mult Exp>
+    |  <Mult Exp>
+
+<Mult Exp>
+    ::= <Mult Exp> '*' <Unary Exp>
+    |  <Mult Exp> '/' <Unary Exp>
+    |  <Unary Exp>
+
+<Unary Exp>
+    ::= '!'  <Unary Exp>
+    |  '~'  <Unary Exp>
+    |  '-'  <Unary Exp>
+    |  '++' <Unary Exp>
+    |  '--' <Unary Exp>
+    | !Nothing

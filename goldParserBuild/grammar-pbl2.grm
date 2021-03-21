@@ -1,0 +1,69 @@
+"Case Sensitive" = False
+NUMBER = {number}+
+
+"Start Symbol" = <E>
+
+<E> ::= <E> '+' <T>
+    |<T>
+
+<T> ::= <T> '*' <F>
+    |<F>
+
+<F> ::= NUMBER
+
+
+
+"Case Sensitive" = False
+
+BOOLEAN = [true|false]
+IDENTIFIERS = {Letter}{AlphaNumeric}*
+
+"Start Symbol" = <PROG>
+
+<PROG> ::= <DECLS><BLOCK>
+<DECLS> ::= <DECL_INT> <DECLS>
+    |<DECL_INT>
+<BLOCK> ::= '{' <CMDS> '}'
+<CMD_IF> ::= 'if ('<EXP_BOOL>') then' <BLOCK>
+<DECL_INT> ::= 'int ' <IDENTIFIERS>
+<IDENTIFIERS> ::= IDENTIFIERS
+<CMD> ::= <CMD_IF>
+<CMDS> ::= <CMD> <CMDS>
+    |<CMD>
+<EXP_BOOL> ::= BOOLEAN
+
+
+
+"Case Sensitive" = False
+
+Identifier = {Letter}{AlphaNumeric}*
+Whitespace = {Whitespace}+
+
+"Start Symbol" = <Declarations>
+
+<Declarations> ::= <Declaration> <Declarations>
+    | <Declaration>
+
+<Declaration> ::= <Variable Decs>
+
+!*******************************************
+!***************** Types *******************
+<Types>
+    := int
+    | real
+    | boolean
+    | string
+
+! ******************************************
+! *********** Var declaration **************
+<Variable Decs>
+    ::= 'var {' <Variable Decs Inner> '}'
+
+<Variable Decs Inner>
+    ::= <Variable Declarator> ',' <Variable Decs Inner>
+    | <Variable Declarator>
+
+<Variable Declarator>
+    ::= <Types>
+!   | <Types> Identifier '=' <Variable Initializer>
+
