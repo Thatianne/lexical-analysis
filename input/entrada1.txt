@@ -32,8 +32,8 @@ true != false
 age ++
 age --
 
-// comentario de linha
-/* comentario
+// comentário de linha
+/* comentário
 de bloco
 */ name
 
@@ -43,4 +43,4 @@ de bloco
 "meu nome com \" barra"
 "meu nome com \" barra > <<
 "meu nome" + name
-/*comentario com erro*
+/*comentário com erro*

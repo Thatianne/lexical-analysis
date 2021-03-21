@@ -1,20 +1,14 @@
-# from helpers.Reader import Reader
+from helpers.Reader import Reader
 
-# reader = Reader('input/entrada1.txt')
+reader = Reader('input/entrada2.txt')
 
-# print(reader.read())
-# reader.back()
-# print(reader.read())
-# print(reader.read())
-# print(reader.read())
-# print(reader.read())
-# reader.back()
-# print(reader.read())
-# print(reader.read())
-# print(reader.read())
+while True:
+  v = reader.read()
+  if v == '"':
+    reader.back()
+    print(reader.read())
+  print(v)
+  if v == '':
+    break
 
-# reader.close()
-
-from states.Initial import Initial
-
-print(Initial.__name__)
+reader.close()

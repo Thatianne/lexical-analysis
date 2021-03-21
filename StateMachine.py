@@ -21,7 +21,6 @@ class StateMachine:
 
     print(BashColors.HEADER + inputFileName + BashColors.ENDC)
     state = Initial
-    symbol = ''
 
     while True:
       symbol = reader.read()
